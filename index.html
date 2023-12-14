@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <!-- Daisy UI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+    <!-- my style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="px-6">
+    <header class="">
+        <div class="navbar gap-4 flex md:flex-wrap lg:flex-wrap mt-4 justify-center flex-col md:flex-row lg:flex-row md:justify-between lg:justify-between items-center">
+            <div class="">
+              <a class="hover:cursor-pointer normal-case text-xl">
+                <img src="icons/Logo.png" alt="">
+              </a>
+            </div>
+            <!-- sort by view -->
+            <div class="">
+                <button class="btn normal-case" id="sort-by-view" >Sort by view</button>
+            </div>
+            <div class="">
+              <a class="btn px-5 normal-case hover:bg-red-500 active:bg-red-600  bg-red-400 text-white" href="blog.html">Blog</a>
+            </div>
+          </div>
+          <div class="divider"></div>
+    </header>
+    <main>
+        <!-- categories buttons -->
+        <div class="flex flex-wrap justify-center">
+            <div id="categories-container" class="flex-wrap justify-center flex gap-4">
+                <!-- button will come dynamically -->
+            </div>
+        </div>
+
+        <!-- all cards -->
+        <div class="mt-4">
+            <div id="cards-container">
+                <!-- card will come dynamically -->
+            </div>
+        </div>
+
+
+    </main>
+    <!-- App.js -->
+    <script src="js/app.js"></script>
+</body>
+</html>

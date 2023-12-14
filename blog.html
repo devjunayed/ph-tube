@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PH Tube</title>
+    <!-- Daisy UI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- my style -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="px-6">
+    <header class="">
+      <div
+        class="navbar flex md:flex-wrap lg:flex-wrap mt-4 justify-center flex-col md:flex-row lg:flex-row md:justify-between lg:justify-between items-center"
+      >
+        <div class="">
+          <a class="hover:cursor-pointer normal-case text-xl" href="index.html">
+            <img src="icons/Logo.png" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="divider"></div>
+    </header>
+    <main class="mx-10 text-justify">
+      <div>
+        <div class=" text-xl md:text-2xl lg:text-3xl font-bold">Questions:</div>
+        <ul class="list-decimal ml-10 mt-4">
+          <li class="hover:text-blue-500">
+            <a href="#one">Discuss the scope of `var`, `let`, and `const`</a>
+          </li>
+          <li class="hover:text-blue-500">
+            <a href="#two">Tell us the use cases of `null` and `undefined`</a>
+          </li>
+          <li class="hover:text-blue-500">
+            <a href="#three">What do you mean by REST API?</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mt-10" id="one">
+        <h1 class="text-xl md:text-3xl lg:text-5xl underline mb-6">
+          1. Discuss the scope of `var`, `let`, and `const`
+        </h1>
+        <div class="text-justify">
+          <p>
+            The scope of variables in JavaScript is determined by whether they
+            are declared using `var`, `let`, or `const`.
+          </p>
+          <br />
+          <p>
+            1.`var`: Variables declared with `var` have function-level scope or
+            global scope, depending on where they are declared. This means they
+            are accessible throughout the function or globally if declared
+            outside of any function. However, `var` variables are not
+            block-scoped, which means they can be accessed outside of blocks
+            like if statements and loops.
+          </p>
+          <br />
+          <p>
+            2.`let`: Variables declared with `let` have block-level scope. They
+            are limited to the block (enclosed by curly braces) where they are
+            declared, such as inside a function, loop, or conditional statement.
+            This allows for more fine-grained control over variable visibility
+            and prevents accidental variable leaks.
+          </p>
+          <br />
+          <p>
+            3. `const`: Variables declared with `const` also have block-level
+            scope, similar to `let`. However, `const` variables cannot be
+            reassigned after they are initialized. While the value they hold is
+            constant, the variable itself cannot be redeclared within the same
+            scope.
+          </p>
+          <br />
+          <p>
+            In summary, `var` has broader scope rules and is less predictable
+            compared to `let` and `const`, which have more localized block-level
+            scope. Using `let` and `const` is generally recommended over `var`
+            as they offer better control and help avoid common bugs associated
+            with variable hoisting and accidental reassignments.
+          </p>
+        </div>
+      </div>
+
+      <div id="two">
+        <h1 class="text-xl md:text-3xl lg:text-5xl underline my-6">
+          2.Tell us the use cases of `null` and `undefined`
+        </h1>
+        <div>
+          <p>
+            `null` and `undefined` are two distinct values in JavaScript with
+            different use cases.
+          </p>
+          <br />
+          <p>
+            `null`: The `null` value is often used to represent the intentional
+            absence of any object value or the absence of a value that should
+            exist. It is a way to explicitly indicate that a variable, property,
+            or function argument does not have a meaningful value at a given
+            point in the code. For example, you might set a variable to `null`
+            to indicate that it has not been assigned any meaningful data yet.
+            `null` is typically used when you want to signify that something is
+            deliberately empty or missing.
+          </p>
+          <br />
+          <p>
+            `undefined`: The `undefined` value represents the absence of a value
+            or the uninitialized state of a variable. It occurs when a variable
+            is declared but has not been assigned any value, or when you access
+            an object property that does not exist. `undefined` can also be used
+            as a default value for function parameters when the caller does not
+            provide an argument. It's important to note that `undefined` is
+            often an indicator of a programming mistake or oversight and should
+            be handled carefully to avoid unexpected behavior.
+          </p>
+          <br />
+
+          <p>
+            In summary, `null` is used when you want to explicitly indicate the
+            absence of a value, while `undefined` typically represents the
+            absence or uninitialized state of a variable or property.
+            Understanding the differences between these two values is important
+            for writing clean and error-free JavaScript code.
+          </p>
+        </div>
+      </div>
+
+      <div id="three">
+        <h1 class="text-xl md:text-3xl lg:text-5xl underline my-6">
+            3. What do you mean by REST API?
+          </h1>
+        <div>
+          <p>
+            A REST API (Representational State Transfer Application Programming
+            Interface) is a set of rules and conventions for building and
+            interacting with web services. It is an architectural style for
+            designing networked applications and relies on a stateless
+            communication protocol, typically HTTP. REST APIs are widely used
+            for enabling communication and data exchange between client
+            applications (such as web or mobile apps) and server-side services
+            or resources.
+          </p>
+          <br />
+          <p>Key characteristics and principles of RESTful APIs include:</p>
+          <br />
+          <p>
+            1.tatelessness: Each HTTP request from a client to a server
+            must contain all the information needed to understand and process
+            the request. The server should not rely on any previous requests or
+            maintain session state between requests.
+          </p>
+          <br />
+          <p>
+            2. Resources: In a REST API, resources are the key abstractions.
+            Resources are identified by URLs (Uniform Resource Locators) and can
+            represent objects, data, or services. Resources can be manipulated
+            using standard HTTP methods like GET (retrieve data), POST (create
+            data), PUT (update data), and DELETE (remove data).
+          </p>
+          <br />
+          <p>
+            3. HTTP Methods: REST APIs map CRUD (Create, Read, Update,
+            Delete) operations to HTTP methods:
+          </p>
+          <br />
+          <p>
+            - `GET`: Retrieve data. <br> - `POST`: Create new data. <br> - `PUT`: Update
+            existing data (usually replacing it entirely). <br> - `PATCH`: Partially
+            update existing data. <br>   - `DELETE`: Remove data.
+          </p>
+          <br />
+          <p>
+            4. URL Structure: URLs are used to identify and access
+            resources. They should be structured hierarchically and
+            meaningfully, representing the relationships between resources.
+          </p>
+          <br />
+          <p>
+            5. Representation: Resources can have multiple representations,
+            such as JSON, XML, or HTML, to facilitate data exchange between
+            clients and servers. Clients can specify their preferred
+            representation through HTTP headers.
+          </p>
+          <br />
+          <p>
+            6. Stateless Communication: RESTful APIs do not maintain client
+            state on the server between requests. Each request is independent,
+            and the client is responsible for managing its own state.
+          </p>
+          <br />
+          <p>
+            7. Uniform Interface: A uniform and consistent interface
+            simplifies interactions between clients and servers, making it
+            easier for developers to understand and use the API.
+          </p>
+          <br />
+          <p>
+            REST APIs have become the standard for designing web services due to
+            their simplicity, scalability, and ease of use. They are widely used
+            in web and mobile app development for accessing and manipulating
+            data on remote servers, integrating with third-party services, and
+            enabling interoperability between different systems and platforms.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
